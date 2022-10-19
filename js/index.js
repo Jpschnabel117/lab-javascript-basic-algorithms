@@ -22,6 +22,7 @@ if (hacker1.length > hacker2.length) {
 // Iteration 3: Loops
 //3.1
 let hacker1SpaceCapped = "";
+
 for (let i = 0; i < hacker1.length; i++) {
   if (i !== hacker1.length - 1) {
     hacker1SpaceCapped = hacker1SpaceCapped + hacker1[i] + " ";
@@ -70,6 +71,19 @@ for (let i = 0; i < essay.length; i++) {
   }
 }
 console.log(wordCount);
+
+let etCount = 0;
+for (let i = 0; i < essay.length; i++) {
+  if (
+    essay[i] === "e" &&
+    essay[i - 1] === " " &&
+    essay[i + 1] === "t" &&
+    (essay[i + 2] === " " || essay[i + 2] === "," || essay[i + 2] === ".")
+  ) {
+    etCount++;
+  }
+}
+console.log(etCount);
 
 //BONUS 2
 let phraseToCheck = "Amor, sssdRoma";
